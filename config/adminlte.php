@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| Informe de caja',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -329,12 +329,107 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        ['header' => 'ACCIONES'],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Ingreso',
+            'icon'    => 'fas fa-solid fa-dollar-sign',
+            'icon_color' => 'success',
+            [
+                'text'       => 'Cursos',
+                'icon_color' => 'warning',
+                'rouete'        => 'frm_cursos',
+                'class' => 'form-submenu',
+            ],
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Cursos',
+                    'route' => ('frm_cursos'),
+                    'class' => 'form-submenu',
+                    'icon_color' => 'warning',
+                ],
+                [
+                    'text'    => 'Otros',
+                    'url'     => '#',
+                    'icon_color' => 'danger',
+                    'submenu' => [
+                        [
+                            'text' => 'Construcctura Ludeño',
+                            'route'  => 'frm_constructora',
+                            'icon' => 'fas fa-solid fa-share fa-flip-vertical'
+                        ],
+                        [
+                            'text' => 'Alquiler de Andamios',
+                            'route'  => 'frm_alquiler_andamios',
+                            'icon' => 'fas fa-solid fa-share fa-flip-vertical'
+                        ],
+                    ],
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'Egreso',
+            'icon'    => 'fas fa-solid fa-file-invoice-dollar',
+            'icon_color' => 'warning',
+            'submenu' => [
+                [
+                    'text'    => 'level_one',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'level_two',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text'    => 'level_two',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'level_three',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'level_three',
+                                    'url'  => '#',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+                [
+                    'text'    => 'level_one',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'level_two',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text'    => 'level_two',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'level_three',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'level_three',
+                                    'url'  => '#',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'Reportes',
+            'icon'    => 'fas fa-solid fa-bullhorn',
+            'icon_color' => 'primary',
+            'submenu' => [
+                [
+                    'text' => 'C',
                     'url'  => '#',
                 ],
                 [
