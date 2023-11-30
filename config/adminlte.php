@@ -306,28 +306,21 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        ['header' => 'CONFIGURACIONES'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'Inicio',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Usuarios',
+            'url'  => '/usuarios',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar Contraseña',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text'        => 'Roles',
+            'url'         => '/roles',
+            'icon'        => 'fas fa-solid fa-dice',
         ],
         ['header' => 'ACCIONES'],
         [
@@ -337,13 +330,13 @@ return [
             [
                 'text'       => 'Cursos',
                 'icon_color' => 'warning',
-                'rouete'        => 'frm_cursos',
+                'url'        => '#',
                 'class' => 'form-submenu',
             ],
             'submenu' => [
                 [
                     'text' => 'Cursos',
-                    'route' => ('frm_cursos'),
+                    'url' => '/frm_cursos',
                     'class' => 'form-submenu',
                     'icon_color' => 'warning',
                 ],
@@ -353,18 +346,18 @@ return [
                     'icon_color' => 'danger',
                     'submenu' => [
                         [
-                            'text' => 'Construcctura Ludeño',
-                            'route'  => 'frm_constructora',
+                            'text' => 'Constructura Ludeño',
+                            'url'  => '/frm_constructora',
                             'icon' => 'fas fa-solid fa-share fa-flip-vertical'
                         ],
                         [
                             'text' => 'Alquiler de Andamios',
-                            'route'  => 'frm_alquiler_andamios',
+                            'url'  => '/frm_alquiler_andamios',
                             'icon' => 'fas fa-solid fa-share fa-flip-vertical'
                         ],
                     ],
                 ],
-                
+
             ],
         ],
         [
@@ -373,54 +366,11 @@ return [
             'icon_color' => 'warning',
             'submenu' => [
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text'       => 'Gasto Extraordinario',
+                    'icon_color' => 'warning',
+                    'url'        => '/frm_gasto_extraordinario',
+                    'class' => 'form-submenu',
                 ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                
             ],
         ],
         [
@@ -429,38 +379,33 @@ return [
             'icon_color' => 'primary',
             'submenu' => [
                 [
-                    'text' => 'C',
+                    'text' => 'Informe diario de Caja',
                     'url'  => '#',
+                    'icon_color' => 'warning'
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text'    => 'Informe de Cursos',
                     'url'     => '#',
+                    'icon_color' => 'danger',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
+                            'text' => 'Carpiteria en Aluminio',
                             'url'  => '#',
+                            'icon' => 'fas fa-solid fa-share fa-flip-vertical'
                         ],
                         [
-                            'text'    => 'level_two',
+                            'text'    => 'Sketch Up',
                             'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'icon' => 'fas fa-solid fa-share fa-flip-vertical'
                         ],
                     ],
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Informe de Alquiler de Andamios',
                     'url'  => '#',
+                    'icon_color' => 'warning'
                 ],
-            ],
+            ]
         ],
         ['header' => 'labels'],
         [

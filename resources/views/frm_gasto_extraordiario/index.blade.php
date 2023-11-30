@@ -8,9 +8,9 @@
 
 @section('content')
 <p>Welcome to this beautiful admin panel.</p>
-Roles
+Gasto Extraordinario
 
-<a class="btn btn-warning" href="{{ route('roles.create') }}">Nuevo</a>
+<a class="btn btn-warning" href="{{ route('frm_cursos.create') }}">Nuevo</a>
 
 @stop
 

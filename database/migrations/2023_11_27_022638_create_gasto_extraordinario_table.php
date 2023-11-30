@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Nombre_a_quien_se_entreg el_dinero');
             $table->string('Quien_aprobo_la_ entrega_de_dinero');
             $table->integer('Nro_de_comprobante');
+            $table->decimal('Monto', 10, 2)->default(0.00);
             $table->timestamps();
         });
     }

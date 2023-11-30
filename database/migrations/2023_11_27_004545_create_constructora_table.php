@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('constructora', function (Blueprint $table) {
             $table->id();
+            $table->string('Dueño_de_la_obra');
+            $table->string('Direccion_de_la_obra');
+            $table->date('Fecha_inicio_de_Obra');
+            $table->date('Fecha_fin_de_Obra');
+            $table->decimal('Costo', 10, 2)->default(0.00);
             $table->timestamps();
         });
     }

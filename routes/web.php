@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\AlquilerAndamiosFormController;
-use App\Http\Controllers\ConstructoraFormController;
+use App\Http\Controllers\ConstructoraLudeñoFormController;
 use App\Http\Controllers\CursosFormController;
-
+use App\Http\Controllers\GastoExtraordinarioFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,18 +35,24 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('home', [HomeController::class, 'index']);
+
 Route::group(['middleware' => [\Illuminate\Auth\Middleware\Authorize::using('publish articles')]], function () {
     //agreagamos los controladores 
     //roles
     Route::resource('roles', RolController::class);
     //usuarios
-    Route::resource('usuarios', RolController::class);
+    Route::resource('usuarios', UsuarioController::class);
     //cursos
-    Route::get('frm_cursos', [CursosFormController::class, 'index'])->name('frm_cursos');
+    Route::resource('frm_cursos', CursosFormController::class);
     //contructora ludeño
-    Route::get('frm_constructora', [ConstructoraFormController::class, 'index'])->name('frm_constructora');
+    Route::resource('frm_constructora', ConstructoraLudeñoFormController::class);
     //alquiler de andamios
-    Route::get('frm_alquiler_andamios', [AlquilerAndamiosFormController::class, 'index'])->name('frm_alquiler_andamios');
+    Route::resource('frm_alquiler_andamios', AlquilerAndamiosFormController::class);
+    //gastos extraordinarios
+    Route::resource('frm_gasto_extraordinario', GastoExtraordinarioFormController::class);
 });
 
-Route::get('home', [HomeController::class, 'index']);
+
+
+

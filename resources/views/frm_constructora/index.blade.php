@@ -3,16 +3,15 @@
 @section('title', 'Ludeño')
 
 @section('content_header')
-<h2>Constructora Ludeño</h2>
+<h1>Dashboard</h1>
 @stop
 
 @section('content')
-<div id="formularioContainer">
-    <!-- El formulario se cargará aquí mediante AJAX -->
-    <form action="" method="post">
-        
-    </form>
-</div>
+<p>Welcome to this beautiful admin panel.</p>
+Constructora ludeño
+
+<a class="btn btn-warning" href="{{ route('frm_alquiler_andamios.create') }}">Nuevo</a>
+
 @stop
 
 @section('css')
@@ -23,5 +22,4 @@
 <script>
     console.log('Hola');
 </script>
-<script src="{{ asset('js/ajax.js') }}"></script>
 @stop
