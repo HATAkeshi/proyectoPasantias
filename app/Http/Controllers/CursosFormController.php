@@ -13,7 +13,7 @@ class CursosFormController extends Controller
     //creamos un contructor nuevo
     function __construct()
     {
-        $this->middleware('permission:ver-cursos | crear-cursos | editar-cursos | borrar-cursos', ['only'=>['index']]);
+        $this->middleware('permission:ver-cursos|crear-cursos|editar-cursos|borrar-cursos', ['only'=>['index']]);
 
         $this->middleware('permission:crear-cursos', ['only'=>['create','store']]);
         //editar

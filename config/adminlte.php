@@ -313,11 +313,6 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Cambiar Contraseña',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
             'text'        => 'Roles',
             'url'         => '/roles',
             'icon'        => 'fas fa-solid fa-dice',
